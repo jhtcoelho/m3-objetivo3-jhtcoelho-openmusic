@@ -1,0 +1,32 @@
+/* Estilização Globais */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+  /* brand colors */
+  --brand-Color-1: #6f00ff;
+  --brand-Color-2: #8629ff;
+
+  /* gray colors */
+  --gray-1: #15171a;
+  --gray-2: #212529;
+  --gray-3: #2b2f33;
+  --gray-4: #ced4da;
+  --gray-5: #dee2e6;
+  --gray-6: #f1f3f5;
+  --gray-7: #f8f9fa;
+  --gray-8: #fdfeff;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--gray-8);
+  display: flex; /* Usado para centralizar o contêiner */
+  justify-content: center; /* Centraliza o contêiner horizontalmente */
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%; /* Garante que o contêiner ocupe 100% da largura até 1024px */
+  padding: 1.25rem; /* Adiciona espaço ao redor do conteúdo */
+  box-sizing: border-box; /* Inclui o padding na largura total */
+}
