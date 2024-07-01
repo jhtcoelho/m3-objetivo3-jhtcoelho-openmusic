@@ -1,1 +1,74 @@
 /* Estilização dos albums */
+.albums-container{
+    margin-top: 2rem;
+}
+
+.albums__div{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.albums__div h3{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.albums__title{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.albums{
+    background-color: var(--gray-7);
+    width: 308px;
+    height: 300;
+    margin-bottom: 3rem;
+    margin-left: 1.15rem;
+}
+
+.albums:hover{
+    background-color: var(--gray-6);
+}
+
+.albums img{
+    object-fit: cover;
+    height: 300px;
+}
+
+.albums__div1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.albums__div2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.albums__div2 p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.albums__div2 button{
+    border-radius: 4px;
+    background-color: var(--brand-Color-2);
+    color: var(--gray-8);
+    height: 2.5rem;
+    width: 5rem;
+    /* padding: 0.7rem 0.5rem; */
+}
+
+.albums__div2 button:hover{
+    background-color: var(--brand-Color-1);
+}

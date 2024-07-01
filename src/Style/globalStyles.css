@@ -17,8 +17,11 @@
   --gray-8: #fdfeff;
 }
 
-body {
+*{
   font-family: "Inter", sans-serif;
+}
+
+body {
   background-color: var(--gray-8);
   display: flex; /* Usado para centralizar o contêiner */
   justify-content: center; /* Centraliza o contêiner horizontalmente */
@@ -29,4 +32,9 @@ body {
   width: 100%; /* Garante que o contêiner ocupe 100% da largura até 1024px */
   padding: 1.25rem; /* Adiciona espaço ao redor do conteúdo */
   box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+main{
+  margin-top: 9rem;
+  margin-right: 2rem;
 }

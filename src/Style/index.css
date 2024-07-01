@@ -1,1 +1,49 @@
 /* Estilização geral*/
+@media (min-width: 900px) and (max-width: 1050px) {
+    .albums__div {
+        grid-template-columns: repeat(2, 1fr); /* Duas imagens por linha */
+    }
+  }
+
+  @media (min-width: 900px) and (max-width: 1008px) {
+    .header img {
+        width: 1.56rem;
+        height: 1.25rem;
+        border-radius: 0.31rem;
+        padding: 0 0.31rem;
+        margin-right: 2rem;
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 850px){
+    .header{
+        width: 100%;
+    }
+
+    .header img {
+        width: 1.56rem;
+        height: 1.25rem;
+        border-radius: 0.31rem;
+        padding: 0 0.31rem;
+        margin-right: 2rem;
+    }
+
+    .albums__div{
+        display: block;
+        text-align: center;
+    }
+
+    .albums{
+        background-color: var(--gray-7);
+        width: 100%;
+        height: 300;
+        margin-bottom: 3rem;
+        margin-left: 1.15rem;
+    }
+
+    .albums img{
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+    }
+  }

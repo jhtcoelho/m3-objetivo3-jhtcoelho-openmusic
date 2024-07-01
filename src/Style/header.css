@@ -4,6 +4,11 @@
     justify-content: space-between;
     padding: 3rem 0;
     border-bottom: var(--brand-Color-2) solid 0.19rem;
+    background-color: var(--gray-8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 62rem;
 }
 
 .header__title{
