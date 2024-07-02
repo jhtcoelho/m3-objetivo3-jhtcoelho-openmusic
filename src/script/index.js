@@ -13,3 +13,22 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+// Tornar o sliding do input consistente com o estilo visual
+function applyInputRangeStyle() {
+  const inputRange = document.querySelector(".range");
+
+  inputRange.addEventListener("input", (event) => {
+    const currentInputValue = event.target.value;
+    const runnableTrackProgress = (currentInputValue / inputRange.max) * 100;
+
+    inputRange.style.background = `linear-gradient(to right, var(--brand-Color-1) ${runnableTrackProgress}%, var(--gray-5) ${runnableTrackProgress}%)`;
+  });
+}
+
+function routine() {
+  applyInputRangeStyle();
+}
+
+// Chama a rotina quando a página for carregada
+document.addEventListener("DOMContentLoaded", routine);

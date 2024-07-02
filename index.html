@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./src/Style/reset.css">
 
     <script src="./src/script/index.js" defer></script>
+    <script src="./src/script/albumsDatabase.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -49,7 +50,7 @@
             <h2 class="priceFilter__title">Definir Preço</h2>
             <h2>Até <span>R$ 100</span></h2>
            </div>
-          <input type="range" id="range">
+           <input id="range" class="range" type="range" min="0" max="150" value="150" />
         </section>
 
         <!-- SEÇÃO DE ALBUNS -->
@@ -58,96 +59,9 @@
           <h2 class="albums__title">Álbuns Encontrados</h2>
           
           <div class="albums__div">
-            <!-- Album 01 -->
-          <div class="albums">
-            <img src="./src/assets/acabou.jpg" alt="Novos_Balanos">
-            <h3>Acabou o Chorare</h3>
-            <div class="albums__div1">
-              <p>Novos Balanos</p>
-              <p>MPB</p>
-            </div>
-
-            <div class="albums__div2">
-              <p>R$137,91</p>
-              <button>Comprar</button>
-            </div>
+            <!-- Álbuns serão renderizados aqui dinamicamente -->
           </div>
-
-          <!-- Album 02 -->
-          <div class="albums">
-            <img src="./src/assets/pink.jpg" alt="Pink_Floyd">
-            <h3>The Wall</h3>
-            <div class="albums__div1">
-              <p>Pink Floyd</p>
-              <p>Rock</p>
-            </div>
-
-            <div class="albums__div2">
-              <p>R$123,56</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-
-          <!-- Album 03 -->
-          <div class="albums">
-            <img src="./src/assets/pimp.jpg" alt="Pimp">
-            <h3>To Pimp a Butterfly</h3>
-            <div class="albums__div1">
-              <p>Kendrick Lamar</p>
-              <p>Rap</p>
-            </div>
-
-            <div class="albums__div2">
-              <p>R$102,66</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-
-          <!-- Album 04 -->
-          <div class="albums">
-            <img src="./src/assets/pink.jpg" alt="Pink_Floyd">
-            <h3>The Wall</h3>
-            <div class="albums__div1">
-              <p>Pink Floyd</p>
-              <p>Rock</p>
-            </div>
-
-            <div class="albums__div2">
-              <p>R$123,56</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-
-          <!-- Album 05 -->
-          <div class="albums">
-            <img src="./src/assets/acabou.jpg" alt="Novos_Balanos">
-            <h3>Acabou o Chorare</h3>
-            <div class="albums__div1">
-              <p>Novos Balanos</p>
-              <p>MPB</p>
-            </div>
-
-            <div class="albums__div2">
-              <p>R$137,91</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-
-          <!-- Album 06 -->
-          <div class="albums">
-            <img src="./src/assets/pimp.jpg" alt="Pimp">
-            <h3>To Pimp a Butterfly</h3>
-            <div class="albums__div1">
-              <p>Kendrick Lamar</p>
-              <p>Rap</p>
-            </div>
-
-            <div class="albums__div2">
-              <p>R$102,66</p>
-              <button>Comprar</button>
-            </div>
-          </div>
-
+          
           </div>
         </section>
       </main>
