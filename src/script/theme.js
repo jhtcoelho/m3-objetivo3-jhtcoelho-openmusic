@@ -30,6 +30,16 @@ function themeChange() {
     }
   });
 
+  // Atualizando as classes dos botões de gênero
+  const genreButtons = document.querySelectorAll(".button");
+  genreButtons.forEach(button => {
+    if (darkMode) {
+      button.classList.add("button__dark");
+    } else {
+      button.classList.remove("button__dark");
+    }
+  });
+
   // Verificando o estado atual de darkMode
   if (darkMode) {
     header.classList.remove("header");
@@ -68,6 +78,12 @@ function themeAnalasys() {
     albumsElements.forEach(album => {
       album.classList.add("albums__dark");
       album.classList.remove("albums");
+    });
+
+    // Atualizando as classes dos botões de gênero
+    const genreButtons = document.querySelectorAll(".button");
+    genreButtons.forEach(button => {
+      button.classList.add("button__dark");
     });
   }
 }
