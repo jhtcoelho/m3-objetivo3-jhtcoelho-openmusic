@@ -43,28 +43,36 @@ const albumList = [
     },
   ];
   
-  document.addEventListener('DOMContentLoaded', function() {
-    const root = document.querySelector('.albums__div');
-  
-    albumList.forEach(album => {
-      const albumElement = document.createElement('div');
-      albumElement.classList.add('albums');
-  
-      albumElement.innerHTML = `
-        <img src="${album.img}" alt="${album.band}">
-        <h3>${album.title}</h3>
-        <div class="albums__div1">
-          <p>${album.band}</p>
-          <p>${album.genre}</p>
-        </div>
-        <div class="albums__div2">
-          <p>R$${album.price}</p>
-          <button>Comprar</button>
-        </div>
-      `;
-  
-      root.appendChild(albumElement);
-    });
+// Criando os elementos .albums dinamicamente
+document.addEventListener('DOMContentLoaded', function() {
+  const root = document.querySelector('.albums__div');
+
+  albumList.forEach(album => {
+    const albumElement = document.createElement('div');
+    albumElement.classList.add('albums');
+    
+    // Adicionando a classe dark-mode se o tema estiver ativado
+    if (darkMode) {
+      albumElement.classList.add('albums__dark');
+      albumElement.classList.remove('albums');
+    }
+
+    albumElement.innerHTML = `
+      <img src="${album.img}" alt="${album.band}">
+      <h3>${album.title}</h3>
+      <div class="albums__div1">
+        <p>${album.band}</p>
+        <p>${album.genre}</p>
+      </div>
+      <div class="albums__div2">
+        <p>R$${album.price}</p>
+        <button>Comprar</button>
+      </div>
+    `;
+
+    root.appendChild(albumElement);
   });
+});
+
   
   

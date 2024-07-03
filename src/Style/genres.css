@@ -9,7 +9,7 @@
     gap: 1rem;
 }
 
-.gender__list button {
+.button {
     padding: 0.5rem;
     background-color: var(--gray-6);
     color: var(--gray-3);
@@ -19,13 +19,12 @@
     cursor: pointer;
   }
 
-.gender__list button:hover {
+.button:hover {
     border-color: var(--gray-3);
 }
   
-.gender__list button.active {
+.button.active {
     background-color: var(--gray-2);
     color: var(--gray-7);
     border-color: var(--gray-2);
   }
-  

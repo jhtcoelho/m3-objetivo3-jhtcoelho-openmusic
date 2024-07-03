@@ -20,9 +20,22 @@
     color: var( --brand-Color-1);
 }
 
-.header img {
+.dark {
     width: 1.56rem;
     height: 1.25rem;
-    border-radius: 0.31rem;
+    border-radius: 0.5rem;
     padding: 0 0.31rem;
+}
+
+/* Dark Mode */
+.header__dark{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+    border-bottom: var(--brand-Color-2) solid 0.19rem;
+    background-color: var(--gray-3);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 62rem;
 }

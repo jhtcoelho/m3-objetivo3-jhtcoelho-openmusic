@@ -38,3 +38,9 @@ main{
   margin-top: 9rem;
   margin-right: 2rem;
 }
+
+/* Dark Mode */
+.dark-mode{
+  background-color: var(--gray-3);
+  color: var(--gray-8);
+}

@@ -72,3 +72,21 @@
 .albums__div2 button:hover{
     background-color: var(--brand-Color-1);
 }
+
+/* Dark Mode */
+.albums__dark{
+    background-color: var(--gray-2);
+    width: 308px;
+    height: 300;
+    margin-bottom: 3rem;
+    margin-left: 1.15rem;  
+}
+
+.albums__dark:hover{
+    background-color: var(--gray-1);
+}
+
+.albums__dark img{
+    object-fit: cover;
+    height: 300px;
+}

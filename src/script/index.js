@@ -2,7 +2,7 @@
 
 // Ativação do botão de genero
 document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.gender__list button');
+    const buttons = document.querySelectorAll('.button');
   
     buttons.forEach(button => {
       button.addEventListener('click', function() {
