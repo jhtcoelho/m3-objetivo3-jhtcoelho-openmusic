@@ -1,50 +1,26 @@
-const albumList = [
-  {
-    title: "Acabou o Chorare",
-    genre: "MPB",
-    band: "Novos Baianos",
-    price: 137.91,
-    img: "./src/assets/acabou.jpg",
-  },
-  {
-    title: "The Wall",
-    genre: "Rock",
-    band: "Pink Floyd",
-    price: 123.56,
-    img: "./src/assets/pink.jpg",
-  },
-  {
-    title: "To Pimp a Butterfly",
-    genre: "Rap",
-    band: "Kendrick Lamar",
-    price: 102.66,
-    img: "./src/assets/pimp.jpg",
-  },
-  {
-    title: "Thriller",
-    genre: "Pop",
-    band: "Michael Jackson",
-    price: 142.32,
-    img: "./src/assets/jackson.jpg",
-  },
-  {
-    title: "All Eyez on Me",
-    genre: "Hip-Hop",
-    band: "2Pac",
-    price: 50.13,
-    img: "./src/assets/2paco.jpg",
-  },
-  {
-    title: "Dom de Sambar",
-    genre: "Samba",
-    band: "Turma do Pagode",
-    price: 51.67,
-    img: "./src/assets/turma.jpg",
-  },
-];
+let albumList = [];
+
+const newList = async () => {
+  try {
+      const response = await fetch("https://openmusic-fake-api.onrender.com/api/musics");
+      
+      if (!response.ok) {
+          throw new Error('Erro ao carregar a lista de músicas');
+      }
+      
+      const jsonLista = await response.json();
+      albumList = jsonLista
+      return jsonLista;
+      
+  } catch (error) {
+      console.error('Erro na requisição:', error);
+      return []; // Retorna um array vazio em caso de erro
+  }
+};
+
 
 // Função para renderizar os álbuns
-function renderAlbums(filteredAlbumList) {
+async function renderAlbums(filteredAlbumList) {
   const root = document.querySelector('.albums__div');
   root.innerHTML = ''; // Limpar álbuns anteriores
 
@@ -66,17 +42,17 @@ function renderAlbums(filteredAlbumList) {
         <p>${album.genre}</p>
       </div>
       <div class="albums__div2">
-        <p>R$${album.price.toFixed(2)}</p>
+        <p>R$${Number(album.price).toFixed(2)}</p>
         <button>Comprar</button>
       </div>
     `;
-
     root.appendChild(albumElement);
   });
 }
 
 // Função para atualizar o texto do preço e filtrar os álbuns
 function updatePriceAndFilter() {
+  console.log("oi")
   const rangeInput = document.getElementById('range');
   const priceValue = document.getElementById('price-value');
   const maxPrice = parseFloat(rangeInput.value);
@@ -95,9 +71,9 @@ function updatePriceAndFilter() {
 document.getElementById('range').addEventListener('input', updatePriceAndFilter);
 
 // Inicializar a renderização dos álbuns
-document.addEventListener('DOMContentLoaded', function() {
-  renderAlbums(albumList); // Mostrar todos os álbuns inicialmente
-  updatePriceAndFilter(); // Atualizar o preço e aplicar filtragem
+document.addEventListener('DOMContentLoaded', async function() {
+  const filteredAlbumList = await newList();
+  renderAlbums(filteredAlbumList); // Mostrar todos os álbuns inicialmente
 });
 
 // Tornar o sliding do input consistente com o estilo visual
@@ -118,6 +94,12 @@ function routine() {
 
 // Chama a rotina quando a página for carregada
 document.addEventListener("DOMContentLoaded", routine);
+
+
+
+
+
+
 
 
   
